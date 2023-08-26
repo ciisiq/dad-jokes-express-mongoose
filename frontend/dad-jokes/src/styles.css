@@ -3,6 +3,7 @@
   --primary--red: #eb3534;
   --dotes--red: #ed5d5c;
   --primary--blue: #2db0cc;
+  --second--blue: #138fab;
   --main--black: #191919;
   --main--white: #f6f6f6;
 }
@@ -18,5 +19,5 @@
 body {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-y: hidden;
 }
