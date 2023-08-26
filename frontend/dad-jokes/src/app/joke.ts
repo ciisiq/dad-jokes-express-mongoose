@@ -1,5 +1,5 @@
 export interface Joke {
-  id: String;
-  joke: String;
-  Status: Number;
+  id: string;
+  joke: string;
+  Status: number;
 }

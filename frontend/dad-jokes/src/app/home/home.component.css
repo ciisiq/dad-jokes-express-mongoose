@@ -22,60 +22,13 @@
   width: 50%;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.fav {
-  overflow-y: scroll;
-}
-
-.p-joke {
-  display: flex;
-  align-items: center;
-  height: 80%;
-  font-size: 1.7rem;
-}
-
-/* --------- BUTTONS CONTAINER --------- */
-
-.btn {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  height: 20%;
-}
-
-button {
-  width: 200px;
-  height: 50px;
-  font-size: 1.5rem;
-  background-color: var(--primary--red);
-  border: none;
-  color: var(--main--white);
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--dotes--red);
-  transform: scale(1.1);
-}
-
-.new {
-  background-color: var(--primary--blue);
-}
-
-.new:hover {
-  background-color: var(--second--blue);
-  transform: scale(1.1);
 }
 
 /* --------- LIST JOKES CONTAINER --------- */
 
 .fav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
 }

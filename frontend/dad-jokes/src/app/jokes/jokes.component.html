@@ -1,1 +1,9 @@
-<p>Joke</p>
+<div class="container">
+  <div class="container-jokes">
+    <p class="joke" *ngIf="joke">"{{ joke.joke }}"</p>
+  </div>
+  <div class="btn">
+    <button (click)="handleSave()" class="save" type="button">Save</button>
+    <button (click)="handleNew()" class="new" type="button">New Joke</button>
+  </div>
+</div>
