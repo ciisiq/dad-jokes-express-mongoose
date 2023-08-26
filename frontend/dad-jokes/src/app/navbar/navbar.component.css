@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--main--black);
+  color: var(--main--white);
+  font-size: 19px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 70px;
+  width: 100%;
+}
+
+.contact-link {
+  cursor: pointer;
+}
+
+.contact-link:hover {
+  color: var(--dotes--red);
+}
+
+.logo {
+  cursor: pointer;
+  color: var(--primary--red);
+  margin-left: 20px;
+  font-weight: bold;
+}

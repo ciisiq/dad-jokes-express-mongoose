@@ -67,6 +67,18 @@ Go to folder
 cd frontend
 ```
 
+Go to dad jokes folder
+
+```bash
+cd dad-jokes
+```
+
+Install Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
 Install all the dependecies
 
 ```bash
@@ -78,6 +90,8 @@ to run angular
 ```bash
 ng server
 ```
+
+Front end runs in the port: http://localhost:4200/
 
 ### Documentations
 

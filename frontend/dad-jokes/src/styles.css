@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary--red: #eb3534;
+  --dotes--red: #ed5d5c;
+  --primary--blue: #2db0cc;
+  --main--black: #191919;
+  --main--white: #f6f6f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
