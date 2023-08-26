@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Joke } from './joke';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -8,10 +8,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
   url = 'https://icanhazdadjoke.com/';
+  urlback = 'http://127.0.0.1:3000/jokes';
 
   constructor(private http: HttpClient) {}
 
-  //from api
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
+
+  //Get data from online API
   getRandomJokes(): Observable<Joke> {
     return this.http.get<Joke>(this.url, {
       headers: {
@@ -20,10 +27,20 @@ export class ApiService {
     });
   }
 
-  //From DB
-  getAllJokesDB() {}
+  // Save a joke into our DB
+  addJoke(joke: Joke): Observable<Joke> {
+    return this.http.post<Joke>(this.urlback, joke, this.httpOptions);
+  }
 
-  saveJoke() {}
+  //Get all data from our DB
+  getAllJokesDB() {
+    return this.http.get(this.urlback);
+  }
 
-  deleteJoke() {}
+  //Get a data from our DB
+  // deleteJoke(id: string) {
+  //   return this.http
+  //     .delete(`$this.http_product_url/${id}`)
+  //     .map((response: Response) => response.json());
+  // }
 }

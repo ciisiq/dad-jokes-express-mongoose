@@ -16,6 +16,12 @@ export class JokesComponent implements OnInit {
     this.apiService.getRandomJokes().subscribe((joke) => (this.joke = joke));
   }
 
+  // saveJoke() {
+  //   this.apiService
+  //     .addJoke(newJoke)
+  //     .subscribe((favJoke) => this.joke.push(favJoke));
+  // }
+
   handleSave() {
     console.log('SAVED');
   }

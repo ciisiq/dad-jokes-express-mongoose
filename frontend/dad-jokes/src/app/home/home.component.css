@@ -28,7 +28,10 @@
 
 .fav {
   display: flex;
-  align-items: center;
-  justify-content: center;
   overflow-y: scroll;
+}
+
+.fav-container {
+  width: 100%;
+  padding: 50px;
 }

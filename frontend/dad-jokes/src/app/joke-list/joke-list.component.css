@@ -1,8 +1,10 @@
 ul {
   text-decoration: none;
-  list-style: none;
+  list-style-type: '\1F602';
+  width: 100%;
 }
 
 li {
   font-size: 1.6rem;
+  margin-bottom: 15px;
 }
