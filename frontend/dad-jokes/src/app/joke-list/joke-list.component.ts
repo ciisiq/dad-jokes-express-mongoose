@@ -8,17 +8,27 @@ import { Joke } from '../joke';
   styleUrls: ['./joke-list.component.css'],
 })
 export class JokeListComponent implements OnInit {
-  data: any = [];
+  savedJokes: Joke[] = [];
 
   constructor(private apiService: ApiService) {}
 
-  getJokeList(): void {
-    this.apiService.getAllJokesDB().subscribe((res) => {
-      this.data = res;
+  ngOnInit(): void {
+    this.apiService.getSavedJokes().subscribe((jokes: Joke[]) => {
+      this.savedJokes = jokes;
     });
   }
 
-  ngOnInit(): void {
-    this.getJokeList();
+  deleteJoke(index: number) {
+    if (index >= 0 && index < this.savedJokes.length) {
+      const jokeToDelete = this.savedJokes[index];
+      console.log(jokeToDelete._id);
+      this.apiService.deleteJoke(jokeToDelete._id).subscribe((res) => {
+        console.log(res);
+        this.savedJokes.splice(index, 1);
+      }),
+        (error: any) => {
+          console.error(error);
+        };
+    }
   }
 }

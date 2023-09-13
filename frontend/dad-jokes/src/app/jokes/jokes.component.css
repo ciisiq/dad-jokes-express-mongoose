@@ -38,11 +38,12 @@ button {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 button:hover {
   background-color: var(--dotes--red);
-  transform: scale(1.1);
+  transform: translateY(-10px);
 }
 
 .new {
@@ -51,5 +52,5 @@ button:hover {
 
 .new:hover {
   background-color: var(--second--blue);
-  transform: scale(1.1);
+  transform: translateY(-10px);
 }

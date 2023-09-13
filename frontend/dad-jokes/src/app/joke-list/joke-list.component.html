@@ -1,5 +1,10 @@
 <div class="fav-container">
   <ul>
-    <li *ngFor="let joke of data">{{ joke.joke }}</li>
+    <li *ngFor="let savedJokes of savedJokes; let i = index">
+      <div class="joke-container">
+        {{ savedJokes.joke }}
+        <button (click)="deleteJoke(i)" type="button" class="delete">🗑️</button>
+      </div>
+    </li>
   </ul>
 </div>

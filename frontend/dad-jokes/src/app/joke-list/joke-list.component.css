@@ -1,3 +1,10 @@
+.joke-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e7e7;
+}
+
 ul {
   text-decoration: none;
   list-style-type: '\1F602';
@@ -7,4 +14,16 @@ ul {
 li {
   font-size: 1.6rem;
   margin-bottom: 15px;
+}
+
+.delete {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete:hover {
+  transform: scale(1.4);
 }

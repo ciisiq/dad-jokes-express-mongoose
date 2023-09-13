@@ -28,27 +28,17 @@ export class ApiService {
   }
 
   // Save a joke into our DB
-  // addJoke(joke: Joke): Observable<Joke> {
-  //   return this.http.post<Joke>(this.urlback, joke, this.httpOptions);
-  // }
-
-  // addJoke(newJoke: string) {
-  //   return this.http.post('/api/jokes', { joke: newJoke });
-  // }
-
   addJoke(jokeData: { joke: string }) {
     return this.http.post(this.urlback, jokeData);
   }
 
   //Get all data from our DB
-  getAllJokesDB() {
-    return this.http.get(this.urlback);
+  getSavedJokes() {
+    return this.http.get<Joke[]>(this.urlback);
   }
 
-  //Get a data from our DB
-  // deleteJoke(id: string) {
-  //   return this.http
-  //     .delete(`$this.http_product_url/${id}`)
-  //     .map((response: Response) => response.json());
-  // }
+  deleteJoke(jokeId: string): Observable<any> {
+    const url = `http://127.0.0.1:3000/jokes/${jokeId}`;
+    return this.http.delete(url);
+  }
 }
