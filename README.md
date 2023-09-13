@@ -1,11 +1,11 @@
-# Dad Jokes App
+# Dad Jokes Full-Stack APP
 
-Just a app for training the backend with express and MongoDB
-and connect to frondend that was done in Angular
+Just a app for training the backend with express and Mongoose
+and connect to frontend, that was done in Angular
 
 ### Project pre-view
 
-![](./public/screenshot.png)
+![](screenshot.png)
 
 ### Tecnologies used:
 
