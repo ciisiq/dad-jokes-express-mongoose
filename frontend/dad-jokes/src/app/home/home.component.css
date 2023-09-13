@@ -5,11 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .title {
-  margin-top: 20px;
+  margin-top: 10px;
   border-bottom: 2px solid var(--primary--red);
 }
 

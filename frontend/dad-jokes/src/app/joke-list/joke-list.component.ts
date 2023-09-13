@@ -15,7 +15,6 @@ export class JokeListComponent implements OnInit {
   getJokeList(): void {
     this.apiService.getAllJokesDB().subscribe((res) => {
       this.data = res;
-      console.log(this.data);
     });
   }
 
