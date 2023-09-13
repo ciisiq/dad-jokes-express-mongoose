@@ -28,8 +28,16 @@ export class ApiService {
   }
 
   // Save a joke into our DB
-  addJoke(joke: Joke): Observable<Joke> {
-    return this.http.post<Joke>(this.urlback, joke, this.httpOptions);
+  // addJoke(joke: Joke): Observable<Joke> {
+  //   return this.http.post<Joke>(this.urlback, joke, this.httpOptions);
+  // }
+
+  // addJoke(newJoke: string) {
+  //   return this.http.post('/api/jokes', { joke: newJoke });
+  // }
+
+  addJoke(jokeData: { joke: string }) {
+    return this.http.post(this.urlback, jokeData);
   }
 
   //Get all data from our DB

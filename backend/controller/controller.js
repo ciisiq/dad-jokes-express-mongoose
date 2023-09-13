@@ -17,12 +17,6 @@ async function addJoke(req, res) {
   try {
     res.status(201);
     await jokes.create(joke);
-    // await jokes.create({
-    //   id: joke.id,
-    //   jokes: joke.jokes,
-    //   status: joke.status,
-    // });
-    console.log(jokes);
   } catch (error) {
     console.log(error);
     res.status(500);

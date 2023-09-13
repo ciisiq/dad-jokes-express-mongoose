@@ -16,15 +16,30 @@ export class JokesComponent implements OnInit {
     this.apiService.getRandomJokes().subscribe((joke) => (this.joke = joke));
   }
 
-  // saveJoke() {
-  //   this.apiService
-  //     .addJoke(newJoke)
-  //     .subscribe((favJoke) => this.joke.push(favJoke));
-  // }
-
   handleSave() {
     console.log('SAVED');
+    if (this.joke) {
+      this.apiService.addJoke({ joke: this.joke.joke }).subscribe((res) => {
+        console.log(res);
+      });
+    }
   }
+
+  // handleSave() {
+  //   console.log('SAVED');
+  //   if (this.joke) {
+  //     this.apiService
+  //       .addJoke({ joke: this.joke.joke })
+  //       .subscribe((res: Joke) => {
+  //         console.log(res);
+
+  //         // Update the displayed joke with the saved joke
+  //         if (res && res.joke) {
+  //           this.joke.joke = res.joke;
+  //         }
+  //       });
+  //   }
+  // }
 
   handleNew() {
     console.log('New Joke comming..');
